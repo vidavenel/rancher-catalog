@@ -8,19 +8,19 @@
       label: MYSQL_ROOT_PASSWORD
       description: | # mot de passe root de la base de données.
       default: root
-      type: string
+      type: "string"
     - variable: MYSQL_DATABASE
       label: MYSQL_DATABASE
       description: nom de la base de données
-      type: string
+      type: "string"
       default: prestashop
     - variable: MYSQL_USER
       label: MYSQL_USER
       description: utilisateur de la base de données
-      type: string
+      type: "string"
       default: prestashop
     - variable: MYSQL_PASSWORD
       label: MYSQL_PASSWORD
       description: mot de passe de l'utilisateur de la base de données
-      type: string
+      type: "string"
       default: prestashop
