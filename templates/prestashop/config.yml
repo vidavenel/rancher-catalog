@@ -1,0 +1,4 @@
+name: Prestashop
+description: Stack prestashop (PHP Apache/Nginx MariaDB PureFtp)
+version: 1.6.1.6
+category: cms
