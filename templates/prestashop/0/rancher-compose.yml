@@ -1,11 +1,5 @@
 .catalog:
-	name: Prestashop
-	version: 1.6.1.6
-	description: stack Prestashop
-	uuid: prestashop-0
-
-web:
-	scale: 1
-
-mariadb:
-	scale: 1
+  name: Prestashop
+  version: 1.6.1.6
+  description: stack Prestashop
+  uuid: prestashop-0
