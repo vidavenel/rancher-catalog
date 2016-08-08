@@ -4,7 +4,6 @@
   description: stack Prestashop
   uuid: prestashop-0
   questions:
-
   - variable: "MYSQL_ROOT_PASSWORD"
     label: "MYSQL_ROOT_PASSWORD"
     description: "mot de passe root de la base de données"
@@ -25,4 +24,3 @@
     description: "mot de passe de l'utilisateur de la base de données"
     type: "string"
     default: "prestashop"
-    
