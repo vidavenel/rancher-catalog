@@ -3,17 +3,17 @@
 	version: 1.6.1.6
 	description: stack Prestashop
 	uuid: prestashop-0
-	questions:
-	- 	variable: "url"
-		label: "Url"
-		description: "Url de la boutique"
-		required: true
-		type: "string"
-		default: "www.example.com"
+	# questions:
+	# - 	variable: "url"
+	# 	label: "Url"
+	# 	description: "Url de la boutique"
+	# 	required: true
+	# 	type: "string"
+	# 	default: "www.example.com"
 
-	- 	variable: "db_name"
-		label: "base de données"
-		description: "nom de la base de données"
-		required: false
-		type: "string"
-		default: "prestashop"
+	# - 	variable: "db_name"
+	# 	label: "base de données"
+	# 	description: "nom de la base de données"
+	# 	required: false
+	# 	type: "string"
+	# 	default: "prestashop"
