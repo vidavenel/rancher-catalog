@@ -1,12 +1,9 @@
-version: '2'
-services:
+# image apache + mod php
+web:
+	image: prestashop/prestashop:1.6
 
-	# image apache + mod php
-	web:
-		image: prestashop/prestashop:1.6
-
-	# database container
-	mariadb:
-		image: mariadb
-		environment:
-			- "MYSQL_ROOT_PASSWORD=root"
+# database container
+mariadb:
+	image: mariadb
+	environment:
+		- "MYSQL_ROOT_PASSWORD=root"
