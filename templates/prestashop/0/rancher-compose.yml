@@ -6,7 +6,21 @@
   questions:
     - variable: MYSQL_ROOT_PASSWORD
       label: MYSQL_ROOT_PASSWORD
-      description: | # The description of the question to show the user how to answer the question.
-      default: # (Optional) A default value that will be pre-populated into the UI
-      required: # (Optional) Whether or not an answer is required. By default, it's considered `false`.
-      type: # How the questions are formatted and types of response expected 
+      description: | # mot de passe root de la base de données.
+      default: root
+      type: string
+    - variable: MYSQL_DATABASE
+      label: MYSQL_DATABASE
+      description: nom de la base de données
+      type: string
+      default: prestashop
+    - variable: MYSQL_USER
+      label: MYSQL_USER
+      description: utilisateur de la base de données
+      type: string
+      default: prestashop
+    - variable: MYSQL_PASSWORD
+      label: MYSQL_PASSWORD
+      description: mot de passe de l'utilisateur de la base de données
+      type: string
+      default: prestashop
