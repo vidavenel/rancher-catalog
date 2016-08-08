@@ -6,8 +6,12 @@ mariadb:
     - "MYSQL_DATABASE=${MYSQL_DATABASE}"
     - "MYSQL_USER=${MYSQL_USER}"
     - "MYSQL_PASSWORD=${MYSQL_PASSWORD}"
+  labels:
+    io.rancher.scheduler.affinity:host_label: host.type=data
 
 web:
   image: vidavenel/prestashop
   volumes:
     - "/root/prestashop:/var/www/html"
+  labels:
+    io.rancher.scheduler.affinity:host_label: host.type=compute
