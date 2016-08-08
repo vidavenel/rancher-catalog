@@ -13,11 +13,14 @@
       label: MYSQL_DATABASE
       description: | # nom de la base de données.
       default: prestashop
+      type: "string"
     - variable: MYSQL_USER
       label: MYSQL_USER
       description: | # utilisateur de la base de données.
       default: prestashop
+      type: "string"
     - variable: MYSQL_PASSWORD
       label: MYSQL_PASSWORD
       description: | # mot de passe de la base de données.
       default: prestashop
+      type: "string"
