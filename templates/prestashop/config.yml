@@ -1,8 +1,6 @@
 name: prestashop
 description: |
-  # Description of the Catalog Entry stack prestashop
+  Stack prestashop (apache mod php, mariadb)
 version: 0.1
 category: CMS
 maintainer: Vincent DAVENEL <vincent@aiglecom.com>
-license: # The license
-projectURL: # A URL related to the catalog entry
