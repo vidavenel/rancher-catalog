@@ -24,3 +24,8 @@
       description: | # mot de passe de la base de données.
       default: prestashop
       type: "string"
+    - variable: PATH
+      label: chemin
+      description: | # nom du dossier du projet
+      default: prestashop
+      type: "string"
