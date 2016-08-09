@@ -8,17 +8,19 @@ mariadb:
     - "MYSQL_PASSWORD=${MYSQL_PASSWORD}"
   labels:
     io.rancher.scheduler.affinity:host_label: host.type=data
+  volumes:
+    - "/home/data/${RANCHER_STACK}/mysql:/var/www/html"
 
 php:
   image: vidavenel/php:presta
   volumes:
-    - "/root/prestashop:/var/www/html"
+    - "/home/data/${RANCHER_STACK}/public_html/:/var/www/html"
   labels:
     io.rancher.scheduler.affinity:host_label: host.type=compute
 
 nginx:
   image: vidavenel/nginx:presta
   volumes:
-    - "/root/prestashop:/var/www/html"
+    - "/home/data/${RANCHER_STACK}/public_html/:/var/www/html"
   labels:
     io.rancher.scheduler.affinity:host_label: host.type=compute
