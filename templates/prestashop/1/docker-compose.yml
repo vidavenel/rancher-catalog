@@ -9,18 +9,18 @@ mariadb:
   labels:
     io.rancher.scheduler.affinity:host_label: host.type=data
   volumes:
-    - "/home/data/$${stack_name}/mysql:/var/www/html"
+    - "/home/data/${stack_name}/mysql:/var/www/html"
 
 php:
   image: vidavenel/php:presta
   volumes:
-    - "/home/data/$${stack_name}/public_html/:/var/www/html"
+    - "/home/data/${stack_name}/public_html/:/var/www/html"
   labels:
     io.rancher.scheduler.affinity:host_label: host.type=compute
 
 nginx:
   image: vidavenel/nginx:presta
   volumes:
-    - "/home/data/$${stack_name}/public_html/:/var/www/html"
+    - "/home/data/${stack_name}/public_html/:/var/www/html"
   labels:
     io.rancher.scheduler.affinity:host_label: host.type=compute
