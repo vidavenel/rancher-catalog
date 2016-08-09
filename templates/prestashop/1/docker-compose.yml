@@ -1,0 +1,24 @@
+# database container
+mariadb:
+  image: mariadb
+  environment:
+    - "MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}"
+    - "MYSQL_DATABASE=${MYSQL_DATABASE}"
+    - "MYSQL_USER=${MYSQL_USER}"
+    - "MYSQL_PASSWORD=${MYSQL_PASSWORD}"
+  labels:
+    io.rancher.scheduler.affinity:host_label: host.type=data
+
+php:
+  image: vidavenel/php:presta
+  volumes:
+    - "/root/prestashop:/var/www/html"
+  labels:
+    io.rancher.scheduler.affinity:host_label: host.type=compute
+
+nginx:
+  image: vidavenel/nginx:presta
+  volumes:
+    - "/root/prestashop:/var/www/html"
+  labels:
+    io.rancher.scheduler.affinity:host_label: host.type=compute
