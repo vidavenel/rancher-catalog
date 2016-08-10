@@ -33,7 +33,7 @@ ftp:
   volumes:
     - "/home/data/${PATH}/public_html/:/home/ftpusers/bob/"
   environment:
-    - "PUBLICHOST=db.aiglecom.pw"
+    - "PUBLICHOST=compute.aiglecom.pw"
   links:
     - nginx
     - php
