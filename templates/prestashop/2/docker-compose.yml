@@ -31,7 +31,7 @@ ftp:
     - "21:21"
     - "30000-30009:30000-30009"
   volumes:
-    - "/home/data/:/home/ftpusers/bob/"
+    - "/home/data/${PATH}/public_html/:/home/ftpusers/bob/"
   environment:
     - "PUBLICHOST=db.aiglecom.pw"
   links:
