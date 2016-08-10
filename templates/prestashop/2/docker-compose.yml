@@ -1,0 +1,35 @@
+# database container
+mariadb:
+  image: mariadb
+  environment:
+    - "MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}"
+    - "MYSQL_DATABASE=${MYSQL_DATABASE}"
+    - "MYSQL_USER=${MYSQL_USER}"
+    - "MYSQL_PASSWORD=${MYSQL_PASSWORD}"
+  labels:
+    io.rancher.scheduler.affinity:host_label: host.type=data
+  volumes:
+    - "/home/data/${PATH}/mysql:/var/www/html"
+
+php:
+  image: vidavenel/php:presta
+  volumes:
+    - "/home/data/${PATH}/public_html/:/var/www/html"
+  labels:
+    io.rancher.scheduler.affinity:host_label: host.type=compute
+
+nginx:
+  image: vidavenel/nginx:presta
+  volumes:
+    - "/home/data/${PATH}/public_html/:/var/www/html"
+  labels:
+    io.rancher.scheduler.affinity:host_label: host.type=compute
+
+ftp:
+  image: stilliard/pure-ftpd
+  volumes:
+    - "/home/data/${PATH}/public_html/:/home/ftpusers/bob"
+  environment:
+    - "PUBLICHOST=db.aiglecom.pw"
+  labels:
+    io.rancher.scheduler.affinity:host_label: host.type=data
