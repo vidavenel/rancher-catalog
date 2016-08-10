@@ -34,7 +34,7 @@ ftp:
     - "/home/data/:/home/ftpusers/bob/"
   environment:
     - "PUBLICHOST=db.aiglecom.pw"
-  depends_on:
+  links:
     - nginx
     - php
     - mariadb
