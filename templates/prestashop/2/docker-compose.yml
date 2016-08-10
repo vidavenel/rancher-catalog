@@ -35,8 +35,8 @@ ftp:
   environment:
     - "PUBLICHOST=db.aiglecom.pw"
   depends_on:
-    - "nginx"
-    - "php"
-    - "mariadb"
+    - nginx
+    - php
+    - mariadb
   labels:
     io.rancher.scheduler.affinity:host_label: host.type=data
