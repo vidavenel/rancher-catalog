@@ -34,6 +34,5 @@ ftp:
     - "/home/data/${PATH}/public_html/:/home/ftpusers/bob"
   environment:
     - "PUBLICHOST=db.aiglecom.pw"
-  command: pure-pw useradd bob -u ftpuser -d /home/ftpusers/bob && pure-pw mkdb
   labels:
     io.rancher.scheduler.affinity:host_label: host.type=data
