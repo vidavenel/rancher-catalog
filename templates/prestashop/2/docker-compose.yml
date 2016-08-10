@@ -27,7 +27,7 @@ nginx:
 
 ftp:
   image: stilliard/pure-ftpd
-  port:
+  ports:
     - "21:21"
     - "30000-30009:30000-30009"
   volumes:
