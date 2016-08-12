@@ -15,6 +15,7 @@ php:
   image: vidavenel/php:presta
   volumes:
     - "/home/data/${PATH}/public_html/:/var/www/html"
+    - "/home/data/${PATH}/log/:/usr/local/var/log"
   labels:
     io.rancher.scheduler.affinity:host_label: host.type=compute
 
@@ -25,11 +26,11 @@ nginx:
   labels:
     io.rancher.scheduler.affinity:host_label: host.type=compute
 
-ftp:
-  image: stilliard/pure-ftpd
-  volumes:
-    - "/home/data/${PATH}/public_html/:/home/ftpusers/bob/"
-  environment:
-    - "PUBLICHOST=compute.aiglecom.pw"
-  labels:
-    io.rancher.scheduler.affinity:host_label: host.type=compute
+# ftp:
+#   image: stilliard/pure-ftpd
+#   volumes:
+#     - "/home/data/${PATH}/public_html/:/home/ftpusers/bob/"
+#   environment:
+#     - "PUBLICHOST=compute.aiglecom.pw"
+#   labels:
+#     io.rancher.scheduler.affinity:host_label: host.type=compute
