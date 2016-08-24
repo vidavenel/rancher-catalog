@@ -1,6 +1,6 @@
 name: prestashop
 description: |
-  Stack prestashop (apache mod php, mariadb)
+  Stack prestashop
 version: 0.1
 category: CMS
 maintainer: Vincent DAVENEL <vincent@aiglecom.com>
