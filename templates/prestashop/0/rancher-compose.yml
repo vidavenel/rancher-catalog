@@ -1,7 +1,7 @@
 .catalog:
   name: Prestashop
   version: 0.2
-  description: stack Prestashop
+  description: stack Prestashop (déprécié pas de persistence des données 2 services mariadb et php:apache)
   uuid: prestashop-0
   questions:
     - variable: MYSQL_ROOT_PASSWORD

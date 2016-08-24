@@ -1,6 +1,6 @@
 .catalog:
   name: Prestashop
-  version: 0.3
+  version: 1.0
   description: stack Prestashop
   uuid: prestashop-0
   questions:

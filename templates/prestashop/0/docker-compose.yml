@@ -11,7 +11,5 @@ mariadb:
 
 web:
   image: vidavenel/prestashop
-  volumes:
-    - "/root/prestashop:/var/www/html"
   labels:
     io.rancher.scheduler.affinity:host_label: host.type=compute

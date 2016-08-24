@@ -16,6 +16,7 @@ php:
   volumes:
     - "/home/data/${PATH}/public_html/:/var/www/html"
     - "/home/data/${PATH}/log/php/:/usr/local/var/log"
+    - "/home/data/${PATH}/php/:/usr/local/etc/php"
   labels:
     io.rancher.scheduler.affinity:host_label: host.type=compute
 
@@ -24,14 +25,7 @@ nginx:
   volumes:
     - "/home/data/${PATH}/public_html/:/var/www/html"
     - "/home/data/${PATH}/log/nginx/:/var/log/nginx"
+    - "/home/data/${PATH}/nginx/certs/:/etc/nginx/certs"
+    - "/home/data/${PATH}/nginx/conf.d/:/etc/nginx/conf.d"
   labels:
     io.rancher.scheduler.affinity:host_label: host.type=compute
-
-# ftp:
-#   image: stilliard/pure-ftpd
-#   volumes:
-#     - "/home/data/${PATH}/public_html/:/home/ftpusers/bob/"
-#   environment:
-#     - "PUBLICHOST=compute.aiglecom.pw"
-#   labels:
-#     io.rancher.scheduler.affinity:host_label: host.type=compute
