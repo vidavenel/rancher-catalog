@@ -33,7 +33,7 @@ nginx:
     gelf-address: "udp://logstash:12201"
   mem_limit: 2097152000
   memswap_limit: 2097152000
-  depends_on:
+  links:
     - logstash
 
 # logstash container
