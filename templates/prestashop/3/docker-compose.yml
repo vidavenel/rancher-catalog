@@ -18,8 +18,8 @@ php:
     - "/home/data/${PATH}/public_html/:/var/www/html"
   labels:
     io.rancher.scheduler.affinity:host_label: host.type=compute
-  mem_limit: 250000000
-  memswap_limit: 250000000
+  mem_limit: 2097152000
+  memswap_limit: 2097152000
 
 # nginx container
 nginx:
@@ -31,8 +31,8 @@ nginx:
   log_driver: gelf
   log_opt:
     gelf-address: "udp://logstash:12201"
-  mem_limit: 250000000
-  memswap_limit: 250000000
+  mem_limit: 2097152000
+  memswap_limit: 2097152000
 
 # logstash container
 logstash:
