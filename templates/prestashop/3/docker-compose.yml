@@ -32,6 +32,7 @@ nginx:
   image: nginx
   volumes:
     - "/home/data/${PATH}/public_html/:/var/www/html"
+    - "/home/data/${PATH}/nginx/conf.d:/etc/nginx/conf.d"
   labels:
     io.rancher.scheduler.affinity:host_label: host.type=compute
 #  log_driver: gelf
