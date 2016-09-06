@@ -1,0 +1,6 @@
+name: lemp
+description: |
+  Stack LEMP (Linux Nginx MariaDb PHP)
+version: 0.1
+category: CMS
+maintainer: Vincent DAVENEL <vincent@aiglecom.com>
