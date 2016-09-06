@@ -28,7 +28,7 @@ nginx:
     - "/home/data/${PATH}/public_html/:/var/www/html"
   labels:
     io.rancher.scheduler.affinity:host_label: host.type=compute
-  log_driver: gelf
+#  log_driver: gelf
   log_opt:
     gelf-address: "udp://logstash:12201"
   mem_limit: 2097152000
