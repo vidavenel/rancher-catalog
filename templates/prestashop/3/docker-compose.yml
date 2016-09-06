@@ -11,18 +11,36 @@ mariadb:
   volumes:
     - "/home/data/${PATH}/mysql:/var/lib/mysql"
 
+# php container
 php:
   image: vidavenel/php:presta
   volumes:
     - "/home/data/${PATH}/public_html/:/var/www/html"
-    - "/home/data/${PATH}/log/php/:/usr/local/var/log"
   labels:
     io.rancher.scheduler.affinity:host_label: host.type=compute
+  mem_limit: 250 000
+  memswap_limit: 250 000
 
+# nginx container
 nginx:
   image: vidavenel/nginx:presta
   volumes:
     - "/home/data/${PATH}/public_html/:/var/www/html"
-    - "/home/data/${PATH}/log/nginx/:/var/log/nginx"
   labels:
     io.rancher.scheduler.affinity:host_label: host.type=compute
+  log_driver: gelf
+  log_opt:
+    gelf-address: "udp://logstash:12201"
+  mem_limit: 250 000
+  memswap_limit: 250 000
+
+# logstash container
+logstash:
+  image: logstash
+  volumes:
+    - "home/data/${PATH}/logstash/gelf.conf:/conf/gelf.conf"
+  command: logstash -f /conf/gelf.conf --verbose
+  environment:
+    - "TZ=Europe/Paris"
+  labels:
+    io.rancher.scheduler.affinity:host_label: host.type=data
