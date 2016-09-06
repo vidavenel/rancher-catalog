@@ -38,7 +38,7 @@ nginx:
 logstash:
   image: logstash
   volumes:
-    - "home/data/${PATH}/logstash/gelf.conf:/conf/gelf.conf"
+    - "home/data/${PATH}/logstash:/conf"
   command: logstash -f /conf/gelf.conf --verbose
   environment:
     - "TZ=Europe/Paris"
