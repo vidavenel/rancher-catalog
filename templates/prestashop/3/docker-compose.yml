@@ -31,8 +31,8 @@ nginx:
   log_driver: gelf
   log_opt:
     gelf-address: "udp://logstash:12201"
-  mem_limit: 250 000
-  memswap_limit: 250 000
+  mem_limit: 250 000 000
+  memswap_limit: 250 000 000
 
 # logstash container
 logstash:

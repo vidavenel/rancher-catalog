@@ -5,7 +5,7 @@ la persistance des données est assurés pour :
 * le site
 * la base de données
 * les logs avec log
-* limitation des ressources à 120 MO pour php et nginx
+* limitation des ressources RAM à 250 MO pour php et nginx
 
 * mariadb
 	+ "/home/data/${PATH}/mysql:/var/lib/mysql"
