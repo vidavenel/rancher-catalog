@@ -12,15 +12,20 @@
     - variable: MYSQL_DATABASE
       label: MYSQL_DATABASE
       description: | # nom de la base de données.
-      default: prestashop
+      default: wordpress
       type: "string"
     - variable: MYSQL_USER
       label: MYSQL_USER
       description: | # utilisateur de la base de données.
-      default: prestashop
+      default: wordpress
       type: "string"
     - variable: MYSQL_PASSWORD
       label: MYSQL_PASSWORD
       description: | # mot de passe de la base de données.
-      default: prestashop
+      default: wordpress
+      type: "string"
+    - variable: PATH
+      label: chemin
+      description: | # nom du dossier du projet
+      default: wordpress
       type: "string"
