@@ -18,8 +18,8 @@ php:
     - "/home/data/${PATH}/public_html/:/var/www/html"
   labels:
     io.rancher.scheduler.affinity:host_label: host.type=compute
-  mem_limit: 250 000
-  memswap_limit: 250 000
+  mem_limit: 250000000
+  memswap_limit: 250000000
 
 # nginx container
 nginx:
