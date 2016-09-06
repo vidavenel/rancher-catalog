@@ -34,7 +34,7 @@ nginx:
   mem_limit: 2097152000
   memswap_limit: 2097152000
   links:
-    - "logstash:logstash"
+    - logstash:logstash
 
 # logstash container
 logstash:
