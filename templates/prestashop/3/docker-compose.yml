@@ -23,7 +23,7 @@ php:
 
 # nginx container
 nginx:
-  image: vidavenel/nginx:presta
+  image: nginx
   volumes:
     - "/home/data/${PATH}/public_html/:/var/www/html"
   labels:
