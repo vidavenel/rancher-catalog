@@ -10,6 +10,9 @@ mariadb:
     io.rancher.scheduler.affinity:host_label: host.type=data
   volumes:
     - "/home/data/${PATH}/mysql:/var/lib/mysql"
+  log_opt:
+    gelf-address: "udp://logstash:12201"
+    gelf-tag: "mariadb"
 
 # php container
 php:
@@ -20,6 +23,9 @@ php:
     io.rancher.scheduler.affinity:host_label: host.type=compute
   mem_limit: 2097152000
   memswap_limit: 2097152000
+  log_opt:
+    gelf-address: "udp://logstash:12201"
+    gelf-tag: "php"
 
 # nginx container
 nginx:
@@ -31,6 +37,7 @@ nginx:
 #  log_driver: gelf
   log_opt:
     gelf-address: "udp://logstash:12201"
+    gelf-tag: "nginx"
   mem_limit: 2097152000
   memswap_limit: 2097152000
 
