@@ -33,12 +33,14 @@ nginx:
     gelf-address: "udp://logstash:12201"
   mem_limit: 2097152000
   memswap_limit: 2097152000
+  depend_on:
+    - logstash
 
 # logstash container
 logstash:
   image: logstash
   volumes:
-    - "home/data/${PATH}/logstash:/conf"
+    - "/home/data/${PATH}/logstash:/conf"
   command: logstash -f /conf/gelf.conf --verbose
   environment:
     - "TZ=Europe/Paris"
