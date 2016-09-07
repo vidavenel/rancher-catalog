@@ -2,10 +2,9 @@ init:
   image: vidavenel/initlemp
   volumes:
     - "/home/data/${PATH}:/data/rootdir"
+  command: bash /data/wp/init.sh
   labels:
     io.rancher.scheduler.affinity:host_label: host.type=compute
-  command: bash /data/wp/init.sh
-  restart: none
 
 # database container
 mariadb:
