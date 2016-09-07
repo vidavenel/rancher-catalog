@@ -4,6 +4,10 @@ init:
     - "/home/data/${PATH}:/data/rootdir"
   labels:
     io.rancher.scheduler.affinity:host_label: host.type=compute
+  command:
+    - bash
+    - /data/wp/init.sh
+  restart: no
 
 # database container
 mariadb:
