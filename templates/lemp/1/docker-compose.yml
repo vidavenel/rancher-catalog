@@ -4,6 +4,8 @@ init:
     - "/home/data/${PATH}:/data/rootdir"
   labels:
     io.rancher.scheduler.affinity:host_label: host.type=compute
+  command: bash /data/wp/init.sh
+  restart: never
 
 # database container
 mariadb:
@@ -27,6 +29,8 @@ php:
     io.rancher.scheduler.affinity:host_label: host.type=compute
   mem_limit: 2097152000
   memswap_limit: 2097152000
+  links:
+    - init
 
 # nginx container
 nginx:
@@ -40,3 +44,5 @@ nginx:
     io.rancher.scheduler.affinity:host_label: host.type=compute
   mem_limit: 2097152000
   memswap_limit: 2097152000
+  links:
+    - php
