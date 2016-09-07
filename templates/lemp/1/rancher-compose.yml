@@ -3,34 +3,4 @@
   version: 0.2
   description: Stack LEMP
   uuid: lemp-0
-  questions:
-    - variable: MYSQL_ROOT_PASSWORD
-      label: MYSQL_ROOT_PASSWORD
-      description: | # mot de passe root de la base de données.
-      default: root
-      type: "string"
-    - variable: MYSQL_DATABASE
-      label: MYSQL_DATABASE
-      description: | # nom de la base de données.
-      default: database
-      type: "string"
-    - variable: MYSQL_USER
-      label: MYSQL_USER
-      description: | # utilisateur de la base de données.
-      default: database
-      type: "string"
-    - variable: MYSQL_PASSWORD
-      label: MYSQL_PASSWORD
-      description: | # mot de passe de la base de données.
-      default: database
-      type: "string"
-    - variable: PATH
-      label: chemin
-      description: | # nom du dossier du projet
-      default: lemp
-      type: "string"
-    - variable: DOMAIN
-      label: Nom de domaine
-      description: | # adresse du site
-      default: www.exemple.com
-      type: "string"
+  
