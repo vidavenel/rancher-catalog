@@ -1,8 +1,7 @@
 init:
   image: vidavenel/initlemp
   volumes:
-    - "/home/data/${PATH}/nginx/conf.d:/data/rootdir/nginx"
-    - "/home/data/${PATH}/php:/data/rootdir/php"
+    - "/home/data/${PATH}:/data/rootdir"
   labels:
     io.rancher.scheduler.affinity:host_label: host.type=compute
 
